@@ -44,7 +44,7 @@ Sample Output
     class HourglassSum
     {
         // Complete the hourglassSum function below.
-        static int hourglassSum(int[][] arr)
+       public static int hourglassSum(int[][] arr)
         {
             int sumMax = 0;
             for (int i = 0; i < 6; i++)
@@ -78,19 +78,10 @@ Sample Output
             }
             return sumHourglass;
         }
-
+        /*
         static void Main(string[] args)
         {
-            int[][] arr = new int[6][];
-
-            for (int i = 0; i < 6; i++)
-            {
-                arr[i] = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
-            }
-
-            int result = hourglassSum(arr);
-
-            Console.WriteLine(result);
-        }
+            
+        }*/
     }
   }

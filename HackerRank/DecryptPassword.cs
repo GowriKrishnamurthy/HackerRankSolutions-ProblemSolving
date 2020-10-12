@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HackerRank.Solution
+namespace HackerRank
 {
-    
-    class Solution
+    public class DecryptPassword
     {
         public static string decryptPassword(string s)
         {
@@ -39,13 +38,6 @@ namespace HackerRank.Solution
 
             }
             return password.ToString();
-        }
-
-        public static void Main(string[] args)
-        {
-            Console.WriteLine(decryptPassword("pTo*Ta*O")); //poTaTO
-            Console.WriteLine(decryptPassword("1Bl*Kg*u0")); //lBgKu1
-            Console.WriteLine(decryptPassword("51Pa*0Lp*0e")); //aP1pL5e
-        }
+        } 
     }
   }
