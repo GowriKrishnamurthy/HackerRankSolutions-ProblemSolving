@@ -1,6 +1,7 @@
 ﻿using HackerRank.Solution;
 using System;
 using System.Collections.Generic;
+using static HackerRank.LinkedList;
 
 namespace HackerRank
 {
@@ -37,7 +38,7 @@ namespace HackerRank
             
 
             // Printing Linked List
-            var llist = new LinkedListSolution.SinglyLinkedList();
+            var llist = new SinglyLinkedList();
             int llistCount = Convert.ToInt32(Console.ReadLine());
 
             for (int i = 0; i < llistCount; i++)
@@ -46,35 +47,35 @@ namespace HackerRank
                 llist.InsertNode(llistItem);
             }
             Console.WriteLine("Printing Linked List");
-            LinkedListSolution.PrintLinkedList(llist.head);
+            PrintLinkedList(llist.head);
             
             // Insert a node at tail
-            var llist2 = new LinkedListSolution.SinglyLinkedList();
+            var llist2 = new SinglyLinkedList();
 
             var llistCount2 = Convert.ToInt32(Console.ReadLine());
 
             for (int i = 0; i < llistCount2; i++)
             {
                 int llistItem = Convert.ToInt32(Console.ReadLine());
-                LinkedListSolution.SinglyLinkedListNode llist_head = LinkedListSolution.InsertNodeAtTail(llist2.head, llistItem);
+                SinglyLinkedListNode llist_head = InsertNodeAtTail(llist2.head, llistItem);
                 llist2.head = llist_head;
             }
-            LinkedListSolution.PrintLinkedList(llist2.head);
-
-            */
+            PrintLinkedList(llist2.head);
+ */           
             // Insert a node at tail
-            LinkedListSolution.SinglyLinkedList llist = new LinkedListSolution.SinglyLinkedList();
+            SinglyLinkedList llist3 = new SinglyLinkedList();
 
-            int llistCount = Convert.ToInt32(Console.ReadLine());
+            var llistCount3 = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 0; i < llistCount; i++)
+            for (int i = 0; i < llistCount3; i++)
             {
                 int llistItem = Convert.ToInt32(Console.ReadLine());
-                LinkedListSolution.SinglyLinkedListNode llist_head = LinkedListSolution.InsertNodeAtHead(llist.head, llistItem);
-                llist.head = llist_head;
+                SinglyLinkedListNode llist_head = InsertNodeAtHead(llist3.head, llistItem);
+                llist3.head = llist_head;
             }
 
-            LinkedListSolution.PrintLinkedList(llist.head);
+            PrintLinkedList(llist3.head);
+   
         }
     }
 }

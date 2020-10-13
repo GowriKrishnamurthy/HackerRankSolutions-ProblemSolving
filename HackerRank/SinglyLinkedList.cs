@@ -1,9 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace HackerRank.Solution
+namespace HackerRank
 {
-    public class LinkedListSolution
+    public class LinkedList
     {
         public class SinglyLinkedListNode
         {
@@ -75,6 +75,5 @@ namespace HackerRank.Solution
                 newNode.next = llist;
             return newNode;
         }
-
     }
 }
