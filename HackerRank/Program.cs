@@ -22,7 +22,7 @@ namespace HackerRank
             }
 
             Console.WriteLine(HourglassSum.hourglassSum(arr));
-            */
+            
             //Array rotate left
             string[] firstMultipleInput = Console.ReadLine().TrimEnd().Split(' ');
             int n = 5; // Convert.ToInt32(firstMultipleInput[0]);
@@ -34,7 +34,19 @@ namespace HackerRank
             List<int> result = RotateLeft.rotateLeft(d, arr1);
 
             Console.WriteLine(String.Join(" ", result));
+            */
 
+            // Printing Linked List
+            var llist = new LinkedListSolution.SinglyLinkedList();
+            int llistCount = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < llistCount; i++)
+            {
+                int llistItem = Convert.ToInt32(Console.ReadLine());
+                llist.InsertNode(llistItem);
+            }
+            Console.WriteLine("Printing Linked List");
+            LinkedListSolution.PrintLinkedList(llist.head);
         }
     }
 }
