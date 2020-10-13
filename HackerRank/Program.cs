@@ -34,7 +34,7 @@ namespace HackerRank
             List<int> result = RotateLeft.rotateLeft(d, arr1);
 
             Console.WriteLine(String.Join(" ", result));
-            */
+            
 
             // Printing Linked List
             var llist = new LinkedListSolution.SinglyLinkedList();
@@ -47,6 +47,20 @@ namespace HackerRank
             }
             Console.WriteLine("Printing Linked List");
             LinkedListSolution.PrintLinkedList(llist.head);
+            */
+
+            // Insert a node at tail
+            var llist2 = new LinkedListSolution.SinglyLinkedList();
+
+            var llistCount2 = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < llistCount2; i++)
+            {
+                int llistItem = Convert.ToInt32(Console.ReadLine());
+                LinkedListSolution.SinglyLinkedListNode llist_head = LinkedListSolution.InsertNodeAtTail(llist2.head, llistItem);
+                llist2.head = llist_head;
+            }
+            LinkedListSolution.PrintLinkedList(llist2.head);
         }
     }
 }
