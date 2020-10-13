@@ -47,8 +47,7 @@ namespace HackerRank
             }
             Console.WriteLine("Printing Linked List");
             LinkedListSolution.PrintLinkedList(llist.head);
-            */
-
+            
             // Insert a node at tail
             var llist2 = new LinkedListSolution.SinglyLinkedList();
 
@@ -61,6 +60,21 @@ namespace HackerRank
                 llist2.head = llist_head;
             }
             LinkedListSolution.PrintLinkedList(llist2.head);
+
+            */
+            // Insert a node at tail
+            LinkedListSolution.SinglyLinkedList llist = new LinkedListSolution.SinglyLinkedList();
+
+            int llistCount = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < llistCount; i++)
+            {
+                int llistItem = Convert.ToInt32(Console.ReadLine());
+                LinkedListSolution.SinglyLinkedListNode llist_head = LinkedListSolution.InsertNodeAtHead(llist.head, llistItem);
+                llist.head = llist_head;
+            }
+
+            LinkedListSolution.PrintLinkedList(llist.head);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace HackerRank.Solution
 {
@@ -65,6 +66,14 @@ namespace HackerRank.Solution
                 currentNode.next = newNode;
             }
             return head;
+        }
+        public static SinglyLinkedListNode InsertNodeAtHead(SinglyLinkedListNode llist, int data)
+        {
+            SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
+            
+            if (llist != null)
+                newNode.next = llist;
+            return newNode;
         }
 
     }
