@@ -35,8 +35,11 @@ namespace HackerRank
             List<int> result = RotateLeft.rotateLeft(d, arr1);
 
             Console.WriteLine(String.Join(" ", result));
-            
+            */
 
+
+            /* *** *** *** LINKED LIST  *** *** *** */
+            /*
             // Printing Linked List
             var llist = new SinglyLinkedList();
             int llistCount = Convert.ToInt32(Console.ReadLine());
@@ -61,7 +64,7 @@ namespace HackerRank
                 llist2.head = llist_head;
             }
             PrintLinkedList(llist2.head);
- */           
+      
             // Insert a node at tail
             SinglyLinkedList llist3 = new SinglyLinkedList();
 
@@ -75,7 +78,32 @@ namespace HackerRank
             }
 
             PrintLinkedList(llist3.head);
-   
+            */
+
+            // Insert a node at a specific position
+            SinglyLinkedList llist4 = new SinglyLinkedList();
+
+            Console.WriteLine("How many elements ?");
+            var llistCount4 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the elements");
+            for (int i = 0; i < llistCount4; i++)
+            {
+                int llistItem4 = Convert.ToInt32(Console.ReadLine());
+                llist4.InsertNode(llistItem4);                
+            }
+
+            Console.WriteLine("Enter new data");
+            int data = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter position to add this data at");
+            int position = Convert.ToInt32(Console.ReadLine());
+
+            SinglyLinkedListNode llist_newHead = InsertNodeAtPosition(llist4.head, data, position);
+
+            PrintLinkedList(llist_newHead);
+
+
+            /* *** *** *** LINKED LIST  *** *** *** */
         }
     }
 }

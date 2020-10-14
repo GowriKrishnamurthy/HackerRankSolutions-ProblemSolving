@@ -75,5 +75,38 @@ namespace HackerRank
                 newNode.next = llist;
             return newNode;
         }
+        public static SinglyLinkedListNode InsertNodeAtPosition(SinglyLinkedListNode head, int data, int position)
+        {
+            SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
+            if (head == null)
+            {
+                // create a new node                
+                newNode.next = null;
+                head = newNode;
+                return head;
+            }
+            else
+            {
+                if (position == 0)
+                {
+                    newNode.next = head;
+                    head = newNode;
+                    return head;
+                }
+                
+                SinglyLinkedListNode currentNode = head;
+                for (int i=0; i< position-1; i++)
+                {
+                    if (currentNode.next != null)
+                        currentNode = currentNode.next;
+                    else
+                        break;
+                }
+                newNode.next = currentNode.next;                  
+                currentNode.next = newNode;
+            }
+
+            return head;
+        } 
     }
 }
