@@ -52,7 +52,7 @@ namespace HackerRank
             Console.WriteLine("Printing Linked List");
             PrintLinkedList(llist.head);
             
-            // Insert a node at tail
+            // Insert a node at tail //
             var llist2 = new SinglyLinkedList();
 
             var llistCount2 = Convert.ToInt32(Console.ReadLine());
@@ -64,8 +64,8 @@ namespace HackerRank
                 llist2.head = llist_head;
             }
             PrintLinkedList(llist2.head);
-      
-            // Insert a node at tail
+
+            //  Insert a node at tail //
             SinglyLinkedList llist3 = new SinglyLinkedList();
 
             var llistCount3 = Convert.ToInt32(Console.ReadLine());
@@ -78,9 +78,8 @@ namespace HackerRank
             }
 
             PrintLinkedList(llist3.head);
-            */
 
-            // Insert a node at a specific position
+            // Insert a node at a specific position //
             SinglyLinkedList llist4 = new SinglyLinkedList();
 
             Console.WriteLine("How many elements ?");
@@ -101,8 +100,45 @@ namespace HackerRank
             SinglyLinkedListNode llist_newHead = InsertNodeAtPosition(llist4.head, data, position);
 
             PrintLinkedList(llist_newHead);
+            */
 
+            // Delete a node at a specific position //
+            /*
+            SinglyLinkedList llist = new SinglyLinkedList();
 
+            Console.WriteLine("How many elements ?");
+            int llistCount = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the elements");
+            for (int i = 0; i < llistCount; i++)
+            {
+                int llistItem = Convert.ToInt32(Console.ReadLine());
+                llist.InsertNode(llistItem);
+            }
+
+            Console.WriteLine("Enter position to delete data from.");
+            int position = Convert.ToInt32(Console.ReadLine());
+
+            SinglyLinkedListNode llist1 = DeleteNode(llist.head, position);
+            PrintLinkedList(llist1);
+
+            
+            // Print linked list in reverse //
+            SinglyLinkedList llist = new SinglyLinkedList();
+
+            Console.WriteLine("How many elements ?");
+            int llistCount = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the elements");
+            for (int i = 0; i < llistCount; i++)
+            {
+                int llistItem = Convert.ToInt32(Console.ReadLine());
+                llist.InsertNode(llistItem);
+            }
+            Console.WriteLine("Linked list printed in Reverse");
+            ReversePrint(llist.head);
+
+            */
             /* *** *** *** LINKED LIST  *** *** *** */
         }
     }

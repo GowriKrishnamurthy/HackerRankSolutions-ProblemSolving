@@ -36,18 +36,18 @@ namespace HackerRank
                     head = node;
                 else
                     tail.next = node;
-                
+
                 tail = node;
             }
         }
 
         public static void PrintLinkedList(SinglyLinkedListNode head)
         {
-            SinglyLinkedListNode node = head;            
-            while (node != null) { 
+            SinglyLinkedListNode node = head;
+            while (node != null) {
                 Console.WriteLine(node.data);
                 node = node.next;
-            } 
+            }
         }
         public static SinglyLinkedListNode InsertNodeAtTail(SinglyLinkedListNode head, int data)
         {
@@ -70,7 +70,7 @@ namespace HackerRank
         public static SinglyLinkedListNode InsertNodeAtHead(SinglyLinkedListNode llist, int data)
         {
             SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
-            
+
             if (llist != null)
                 newNode.next = llist;
             return newNode;
@@ -93,20 +93,53 @@ namespace HackerRank
                     head = newNode;
                     return head;
                 }
-                
+
                 SinglyLinkedListNode currentNode = head;
-                for (int i=0; i< position-1; i++)
+                for (int i = 0; i < position - 1; i++)
                 {
                     if (currentNode.next != null)
                         currentNode = currentNode.next;
                     else
                         break;
                 }
-                newNode.next = currentNode.next;                  
+                newNode.next = currentNode.next;
                 currentNode.next = newNode;
             }
 
             return head;
-        } 
+        }
+
+        public static SinglyLinkedListNode DeleteNode(SinglyLinkedListNode head, int position)
+        {
+            if (head != null)
+            {
+                if (position == 0)
+                {
+                    head = head.next;
+                    return head;
+                }
+
+                SinglyLinkedListNode currentNode = head;
+                for (int i = 0; i < position - 1; i++)
+                {
+                    if (currentNode.next != null)
+                        currentNode = currentNode.next;
+                    else
+                        break;
+                }
+
+                currentNode.next = currentNode.next.next;
+            }
+
+            return head;
+        }
+        public static void ReversePrint(SinglyLinkedListNode head)
+        {
+            if (head!=null)
+            {
+                ReversePrint(head.next);
+                Console.WriteLine(head.data);
+            }
+        }
     }
 }
