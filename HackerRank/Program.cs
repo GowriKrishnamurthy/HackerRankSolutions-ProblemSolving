@@ -181,12 +181,18 @@ namespace HackerRank
             List<int> b = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(bTemp => Convert.ToInt32(bTemp)).ToList();
             List<int> result = CompareTriplet.CompareTriplets(a, b);
             Console.WriteLine(String.Join(" ", result));
-            */
+            
             int arCount = Convert.ToInt32(Console.ReadLine());
             long[] ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt64(arTemp));
             long result = VeryBigSum.AVeryBigSum(ar);
 
             Console.WriteLine(result);
+            */
+
+            // Plus minus ratio
+            int n = Convert.ToInt32(Console.ReadLine());
+            int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+            PlusMinusRatio.plusMinus(arr);
         }
     }
 }
