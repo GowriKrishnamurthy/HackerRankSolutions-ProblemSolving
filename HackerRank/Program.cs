@@ -1,6 +1,7 @@
 ﻿using HackerRank.Solution;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using static HackerRank.LinkedList;
 
 namespace HackerRank
@@ -138,8 +139,7 @@ namespace HackerRank
             Console.WriteLine("Linked list printed in Reverse");
             ReversePrint(llist.head);
 
-            */
-
+            
             // Print linked list in reverse - Option 1//
             SinglyLinkedList llist = new SinglyLinkedList();
 
@@ -172,7 +172,15 @@ namespace HackerRank
             Console.WriteLine("Reversed linked list . Option2..");
             PrintLinkedList(ReverseOption2(llist.head));
 
+            */
+
             /* *** *** *** LINKED LIST  *** *** *** */
+
+            // Compare triplets
+            List<int> a = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(aTemp => Convert.ToInt32(aTemp)).ToList();
+            List<int> b = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(bTemp => Convert.ToInt32(bTemp)).ToList();
+            List<int> result = CompareTriplet.CompareTriplets(a, b);
+            Console.WriteLine(String.Join(" ", result));
         }
     }
 }
