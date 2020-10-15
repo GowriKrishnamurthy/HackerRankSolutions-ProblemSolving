@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics.Tracing;
 
 namespace HackerRank
 {
@@ -141,5 +143,38 @@ namespace HackerRank
                 Console.WriteLine(head.data);
             }
         }
+        public static SinglyLinkedListNode ReverseOption1(SinglyLinkedListNode head)
+        {
+            // no node or only one node
+            if (head == null || head.next == null)
+                return head;
+
+            SinglyLinkedListNode current = head;
+            SinglyLinkedListNode prev = null;            
+            SinglyLinkedListNode next=null;
+
+            while(current!=null)
+            {
+                next = current.next;
+                current.next = prev;
+                prev = current;
+                current = next;
+            }
+            return prev;
+        }
+
+        public static SinglyLinkedListNode ReverseOption2(SinglyLinkedListNode head)
+        {
+            // no node or only one node
+            if (head == null || head.next == null)
+                return head;
+
+            SinglyLinkedListNode remaining = ReverseOption2(head.next);
+            head.next.next = head;
+            head.next = null;
+            
+            return remaining;
+        }
+
     }
 }

@@ -139,6 +139,39 @@ namespace HackerRank
             ReversePrint(llist.head);
 
             */
+
+            // Print linked list in reverse - Option 1//
+            SinglyLinkedList llist = new SinglyLinkedList();
+
+            Console.WriteLine("How many elements ?");
+            int llistCount = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the elements");
+            for (int i = 0; i < llistCount; i++)
+            {
+                int llistItem = Convert.ToInt32(Console.ReadLine());
+                llist.InsertNode(llistItem);
+            }
+            
+            Console.WriteLine("Reversed linked list . Option1..");
+            PrintLinkedList(ReverseOption1(llist.head));
+
+            // Print linked list in reverse - Option 2 //
+            llist = new SinglyLinkedList();
+
+            Console.WriteLine("How many elements ?");
+            llistCount = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the elements");
+            for (int i = 0; i < llistCount; i++)
+            {
+                int llistItem = Convert.ToInt32(Console.ReadLine());
+                llist.InsertNode(llistItem);
+            }
+
+            Console.WriteLine("Reversed linked list . Option2..");
+            PrintLinkedList(ReverseOption2(llist.head));
+
             /* *** *** *** LINKED LIST  *** *** *** */
         }
     }
