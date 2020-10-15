@@ -175,12 +175,18 @@ namespace HackerRank
             */
 
             /* *** *** *** LINKED LIST  *** *** *** */
-
+            /*
             // Compare triplets
             List<int> a = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(aTemp => Convert.ToInt32(aTemp)).ToList();
             List<int> b = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(bTemp => Convert.ToInt32(bTemp)).ToList();
             List<int> result = CompareTriplet.CompareTriplets(a, b);
             Console.WriteLine(String.Join(" ", result));
+            */
+            int arCount = Convert.ToInt32(Console.ReadLine());
+            long[] ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt64(arTemp));
+            long result = VeryBigSum.AVeryBigSum(ar);
+
+            Console.WriteLine(result);
         }
     }
 }
