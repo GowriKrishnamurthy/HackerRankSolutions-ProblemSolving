@@ -187,12 +187,19 @@ namespace HackerRank
             long result = VeryBigSum.AVeryBigSum(ar);
 
             Console.WriteLine(result);
-            */
-
+            
             // Plus minus ratio
             int n = Convert.ToInt32(Console.ReadLine());
             int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
             PlusMinusRatio.plusMinus(arr);
+
+            */
+            //sock merchant
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            int[] ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt32(arTemp));
+            
+            Console.WriteLine(SockMerchant.sockMerchant(n, ar));
         }
     }
 }
