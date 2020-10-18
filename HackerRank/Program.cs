@@ -193,13 +193,23 @@ namespace HackerRank
             int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
             PlusMinusRatio.plusMinus(arr);
 
-            */
             //sock merchant
             int n = Convert.ToInt32(Console.ReadLine());
 
             int[] ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt32(arTemp));
             
             Console.WriteLine(SockMerchant.sockMerchant(n, ar));
+            */
+
+            Console.WriteLine("Enter number of steps");
+            int steps = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter path");
+            string path = Console.ReadLine(); ;
+
+            Console.WriteLine(CountingValleys.countingValleys(steps, path));
+
+
         }
     }
 }
