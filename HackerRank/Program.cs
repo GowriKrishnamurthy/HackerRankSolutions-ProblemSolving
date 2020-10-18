@@ -199,8 +199,8 @@ namespace HackerRank
             int[] ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt32(arTemp));
             
             Console.WriteLine(SockMerchant.sockMerchant(n, ar));
-            */
-
+            
+            // Counting valleys
             Console.WriteLine("Enter number of steps");
             int steps = Convert.ToInt32(Console.ReadLine());
 
@@ -208,7 +208,16 @@ namespace HackerRank
             string path = Console.ReadLine(); ;
 
             Console.WriteLine(CountingValleys.countingValleys(steps, path));
+            */
 
+            //Repeated string
+            Console.WriteLine("Enter the text");
+            string s = Console.ReadLine();
+
+            Console.WriteLine("Enter number of occurences to find");
+            long n = Convert.ToInt64(Console.ReadLine());
+            
+            Console.WriteLine(RepeatedString.repeatedString(s, n));           
 
         }
     }
