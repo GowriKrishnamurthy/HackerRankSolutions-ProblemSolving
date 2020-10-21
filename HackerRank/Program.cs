@@ -208,8 +208,7 @@ namespace HackerRank
             string path = Console.ReadLine(); ;
 
             Console.WriteLine(CountingValleys.countingValleys(steps, path));
-            */
-
+            
             //Repeated string
             Console.WriteLine("Enter the text");
             string s = Console.ReadLine();
@@ -217,8 +216,12 @@ namespace HackerRank
             Console.WriteLine("Enter number of occurences to find");
             long n = Convert.ToInt64(Console.ReadLine());
             
-            Console.WriteLine(RepeatedString.repeatedString(s, n));           
+            Console.WriteLine(RepeatedString.repeatedString(s, n));
+            */
 
+            // Time conversion
+            string s = Console.ReadLine();
+            Console.WriteLine(TimeConversion.timeConversion(s));
         }
     }
 }
