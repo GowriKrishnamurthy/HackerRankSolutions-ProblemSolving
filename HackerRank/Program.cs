@@ -217,11 +217,27 @@ namespace HackerRank
             long n = Convert.ToInt64(Console.ReadLine());
             
             Console.WriteLine(RepeatedString.repeatedString(s, n));
-            */
-
+            
             // Time conversion
             string s = Console.ReadLine();
             Console.WriteLine(TimeConversion.timeConversion(s));
+            */
+
+            // Halloween sales - how many games
+            string[] pdms = Console.ReadLine().Split(' ');
+            int p = Convert.ToInt32(pdms[0]);
+            int d = Convert.ToInt32(pdms[1]);
+            int m = Convert.ToInt32(pdms[2]);
+            int s = Convert.ToInt32(pdms[3]);
+            
+            int answer = HalloweenSale.howManyGames(p, d, m, s);
+            
+            answer = HalloweenSale.howManyGames(20,3,6, 85);                       
+            Console.WriteLine(answer);
+
+            answer = HalloweenSale.howManyGames(20, 3, 6, 80);
+            Console.WriteLine(answer);
+            
         }
     }
 }
