@@ -221,8 +221,7 @@ namespace HackerRank
             // Time conversion
             string s = Console.ReadLine();
             Console.WriteLine(TimeConversion.timeConversion(s));
-            */
-
+            
             // Halloween sales - how many games
             string[] pdms = Console.ReadLine().Split(' ');
             int p = Convert.ToInt32(pdms[0]);
@@ -237,7 +236,11 @@ namespace HackerRank
 
             answer = HalloweenSale.howManyGames(20, 3, 6, 80);
             Console.WriteLine(answer);
-            
+            */
+
+            //stair case
+            int n = Convert.ToInt32(Console.ReadLine());
+            Staircase.staircase(n);
         }
     }
 }
