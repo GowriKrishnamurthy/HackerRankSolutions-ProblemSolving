@@ -240,8 +240,8 @@ namespace HackerRank
             //stair case
             int n = Convert.ToInt32(Console.ReadLine());
             Staircase.staircase(n);
-            */
-
+            
+            //Diagonal Difference
             int n = Convert.ToInt32(Console.ReadLine().Trim());
 
             List<List<int>> arr = new List<List<int>>();
@@ -253,6 +253,11 @@ namespace HackerRank
 
             int result = DiagonalDifference.diagonalDifference(arr);
             Console.WriteLine(result);
+            */
+
+            // miniMaxSum
+            int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+            MiniMaxSum.miniMaxSum(arr);
         }
     }
 }
