@@ -8,7 +8,7 @@ namespace HackerRank
 {
     class Program
     {
-       static void Main(string[] args)
+        static void Main(string[] args)
         {
             /*
             // Decrypt password
@@ -236,11 +236,23 @@ namespace HackerRank
 
             answer = HalloweenSale.howManyGames(20, 3, 6, 80);
             Console.WriteLine(answer);
-            */
-
+         
             //stair case
             int n = Convert.ToInt32(Console.ReadLine());
             Staircase.staircase(n);
+            */
+
+            int n = Convert.ToInt32(Console.ReadLine().Trim());
+
+            List<List<int>> arr = new List<List<int>>();
+
+            for (int i = 0; i < n; i++)
+            {
+                arr.Add(Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList());
+            }
+
+            int result = DiagonalDifference.diagonalDifference(arr);
+            Console.WriteLine(result);
         }
     }
 }
