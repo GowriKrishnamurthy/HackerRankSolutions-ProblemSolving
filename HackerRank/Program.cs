@@ -174,6 +174,36 @@ namespace HackerRank
 
             */
 
+            //Merge Sorted lists
+            // int tests = Convert.ToInt32(Console.ReadLine());
+            SinglyLinkedList llist1 = new SinglyLinkedList();
+
+            Console.WriteLine("How many elements in list1 ?");
+            int llist1Count = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the elements");
+            for (int i = 0; i < llist1Count; i++)
+            {
+                int llist1Item = Convert.ToInt32(Console.ReadLine());
+                llist1.InsertNode(llist1Item);
+            }
+
+            SinglyLinkedList llist2 = new SinglyLinkedList();
+            Console.WriteLine("How many elements in list2 ?");
+            int llist2Count = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the elements");
+            for (int i = 0; i < llist2Count; i++)
+            {
+                int llist2Item = Convert.ToInt32(Console.ReadLine());
+                llist2.InsertNode(llist2Item);
+            }
+
+            SinglyLinkedListNode llist3 = MergeLists(llist1.head, llist2.head);
+
+            Console.WriteLine("Combined list elements");
+            PrintLinkedList(llist3);
+
             /* *** *** *** LINKED LIST  *** *** *** */
             /*
             // Compare triplets
@@ -253,11 +283,12 @@ namespace HackerRank
 
             int result = DiagonalDifference.diagonalDifference(arr);
             Console.WriteLine(result);
-            */
+            
 
             // miniMaxSum
             int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
             MiniMaxSum.miniMaxSum(arr);
+            */
         }
     }
 }
