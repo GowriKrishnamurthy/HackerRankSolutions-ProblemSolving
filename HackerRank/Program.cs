@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using static HackerRank.LinkedList;
-
 namespace HackerRank
 {
     class Program
@@ -120,6 +118,19 @@ namespace HackerRank
             int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
             MiniMaxSum.miniMaxSum(arr);
             */
+
+            //Birthday Cake Candles
+
+            Console.WriteLine("Enter the # of candles");
+            int candlesCount = Convert.ToInt32(Console.ReadLine().Trim());
+
+            Console.WriteLine("Enter the candles");
+            List<int> candles = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(candlesTemp => Convert.ToInt32(candlesTemp)).ToList();
+
+            int result = BirthdayCakeCandles.birthdayCakeCandles(candles);
+
+            Console.WriteLine("Total number of tallest candles"); 
+            Console.WriteLine(result);
         }
     }
 }
