@@ -131,6 +131,20 @@ namespace HackerRank
 
             Console.WriteLine("Total number of tallest candles"); 
             Console.WriteLine(result);
+
+            //GradingStudents
+            int gradesCount = Convert.ToInt32(Console.ReadLine().Trim());
+
+            List<int> grades = new List<int>();
+
+            for (int i = 0; i < gradesCount; i++)
+            {
+                int gradesItem = Convert.ToInt32(Console.ReadLine().Trim());
+                grades.Add(gradesItem);
+            }
+
+            List<int> result1 = GradingStudents.gradingStudents(grades);
+            Console.WriteLine(result1);
         }
     }
 }
