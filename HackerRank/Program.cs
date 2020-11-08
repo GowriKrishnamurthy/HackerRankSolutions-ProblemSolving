@@ -163,6 +163,14 @@ namespace HackerRank
                     long[] arrAVeryBigSum = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt64(arTemp));                    
                     Console.WriteLine(VeryBigSum.AVeryBigSum(arrAVeryBigSum));
                     break;
+                case 17:
+                    Console.WriteLine("Bubble Sort");
+                    Console.WriteLine("Enter number of elements");
+                    Convert.ToInt32(Console.ReadLine());
+
+                    int[] arrBubbleSort = Array.ConvertAll(Console.ReadLine().Split(' '), aTemp => Convert.ToInt32(aTemp));
+                    BubbleSorting.CountSwaps(arrBubbleSort);
+                    break;
             }
         }
     }
