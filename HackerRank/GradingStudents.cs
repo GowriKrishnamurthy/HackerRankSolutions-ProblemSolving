@@ -48,4 +48,18 @@ Input Format
 
 The first line contains a single integer, n, the number of students.
 Each line  i of the n  subsequent lines contains a single integer,grades[i] .
+
+Sample Input 0
+
+4
+73
+67
+38
+33
+
+Sample Output 0
+75
+67
+40
+33
 */
