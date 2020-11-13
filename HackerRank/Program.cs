@@ -24,7 +24,9 @@ namespace HackerRank
             13.miniMaxSum
             14.Birthday Cake Candles
             15.GradingStudents
-            16.AVeryBigSum");
+            16.AVeryBigSum
+            17.BubbleSort
+            18.MinimumSwaps");
 
             int option = int.Parse(Console.ReadLine());
             switch (option)
@@ -170,6 +172,15 @@ namespace HackerRank
 
                     int[] arrBubbleSort = Array.ConvertAll(Console.ReadLine().Split(' '), aTemp => Convert.ToInt32(aTemp));
                     BubbleSorting.CountSwaps(arrBubbleSort);
+                    break;
+                case 18:
+                    Console.WriteLine("Minimum Swaps");
+                    Console.WriteLine("Enter number of elements");
+                    n = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter the elements");
+                    int[] numArr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+                    int res = MinimumSwaps.minimumSwaps(numArr);
+                    Console.WriteLine(res);
                     break;
             }
         }
