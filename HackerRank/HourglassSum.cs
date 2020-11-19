@@ -61,7 +61,7 @@ Sample Output
         }
         
         //Solution 2
-        public static int hourglassSum(int[][] arr)
+        public static int hourglassSum1(int[][] arr)
         {
             int sumMax = 0;
             for (int i = 0; i < 6; i++)
