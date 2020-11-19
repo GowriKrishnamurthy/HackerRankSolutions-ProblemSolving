@@ -43,8 +43,25 @@ Sample Output
  */
     class HourglassSum
     {
-        // Complete the hourglassSum function below.
-       public static int hourglassSum(int[][] arr)
+       //Solution 1
+       static int hourglassSum(int[][] arr) {
+            int max = -63;
+            for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                int sum = arr[i + 1][j + 1];
+                for (int k = 0; k < 3; k++) {
+                    sum += arr[i][j + k];
+                    sum += arr[i + 2][j + k];
+                }
+                if (sum > max) 
+                    max = sum;
+                }
+            }
+            return max;
+        }
+        
+        //Solution 2
+        public static int hourglassSum(int[][] arr)
         {
             int sumMax = 0;
             for (int i = 0; i < 6; i++)
