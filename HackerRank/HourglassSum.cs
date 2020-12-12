@@ -44,7 +44,7 @@ Sample Output
     class HourglassSum
     {
        //Solution 1
-       static int hourglassSum(int[][] arr) {
+       public static int hourglassSum(int[][] arr) {
             int max = -63;
             for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
