@@ -26,7 +26,8 @@ namespace HackerRank
             15.GradingStudents
             16.AVeryBigSum
             17.BubbleSort
-            18.MinimumSwaps");
+            18.MinimumSwaps
+            19.NotesStore");
 
             int option = int.Parse(Console.ReadLine());
             switch (option)
@@ -181,6 +182,35 @@ namespace HackerRank
                     int[] numArr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
                     int res = MinimumSwaps.minimumSwaps(numArr);
                     Console.WriteLine(res);
+                    break;
+                case 19:
+                    var notesStoreObj = new NotesStore();
+                    n = int.Parse(Console.ReadLine());
+                    for (var i = 0; i < n; i++)
+                    {
+                        var operationInfo = Console.ReadLine().Split(' ');
+                        try
+                        {
+                            if (operationInfo[0] == "AddNote")
+                                notesStoreObj.AddNote(operationInfo[1], operationInfo.Length == 2 ? "" : operationInfo[2]);
+                            else if (operationInfo[0] == "GetNotes")
+                            {
+                                var reslt = notesStoreObj.GetNotes(operationInfo[1]);
+                                if (reslt.Count == 0)
+                                    Console.WriteLine("No Notes");
+                                else
+                                    Console.WriteLine(string.Join(",", reslt));
+                            }
+                            else
+                            {
+                                Console.WriteLine("Invalid Parameter");
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine("Error: " + e.Message);
+                        }
+                    }
                     break;
             }
         }
